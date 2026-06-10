@@ -1,0 +1,35 @@
+{
+  "controls": [
+    {
+      "sid": "receiptColor",
+      "label": "Receipt color"
+    },
+    {
+      "sid": "checkColor",
+      "label": "Check color"
+    },
+    {
+      "sid": "accentBarColor",
+      "label": "Accent bar color"
+    },
+    {
+      "sid": "lineColor",
+      "label": "List line color"
+    },
+    {
+      "sid": "wordmarkColor",
+      "label": "Wordmark color"
+    },
+    {
+      "sid": "bgColor",
+      "label": "Background color"
+    },
+    {
+      "sid": "markStrokeWidth",
+      "label": "Mark stroke width",
+      "min": 4,
+      "max": 16,
+      "step": 1
+    }
+  ]
+}
