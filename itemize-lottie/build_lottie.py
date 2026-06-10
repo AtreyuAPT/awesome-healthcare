@@ -233,6 +233,12 @@ def glyph_contours(name):
                 segs.append((s, c1, c2, e)); s = e
             cur = end
         elif cmd == "closePath":
+            # TrueType contours are implicitly closed: if the last drawn point
+            # isn't the start, add the closing line so the final segment exists.
+            if cur is not None and start is not None and (
+                abs(cur[0] - start[0]) > 1e-6 or abs(cur[1] - start[1]) > 1e-6):
+                segs.append((cur, cur, start, start))
+                cur = start
             flush()
     flush()
     return contours
